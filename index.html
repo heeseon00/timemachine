@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중간프로젝트</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="top">
+        <span class="vixx-title"></span><br>
+        <span class="time-machine-title"></span>
+   </header>
+
+    <div class="content">
+        <div class="text">
+    <p>다락 한구석에 먼지 가득 덮어쓴</p>
+<p>작고 낡은 라디오</p>
+<p>음악 소리 속에 선명하게 들려온</p>
+<p>작고 여린 목소리</p><br>
+
+<p>Who's that Who's that </p>
+<p>기억이 날 듯 귀에 익은 듯 </p>
+<p>이제는 훌쩍 자란 조금은 어렸던 나 </p>
+<p>마치 꿈처럼 어제 일처럼</p> 
+<p>흘러나오는 나의 얘기 </p><br>
+
+<p>어느새 바래져 낡은 사진 속에 깊이 남아있는 </p>
+<p>밝혀줘 그 빛을 잃은 시간들</p> 
+<p>하나하나 다시 불러보는 너무 그리운 날들</p>
+<p>거짓말처럼 살아나는 </p>
+<p>It's my time machine </p><br>
+
+<p>오랜 상자 속에</p>
+<p>잠든 어린 시절</p>
+<p>옛날 얘기처럼</p>
+<p>꺼낸 어린 시절</p><br>
+
+<p>모래성 쌓기와 땅따먹기</p>
+<p>흙이 더럽다는 생각은 안 하고 만졌지 난 </p>
+<p>그리워 그때가</p>
+<p>아니 순수하던 그때의 내가</p>
+<p>아이들은 어른이 되고 싶고</p>
+<p>어른들은 아이가 되고픈 심리</p><br>
+
+<p>시침 떼봐야 시간은 가</p>
+<p>방법은 하나야 Time machine ride </p>
+<p>신 나는 일도 무서운 일도</p>
+<p>모든 게 즐거웠던 조금은 어렸던 나</p>
+<p>피식 웃음이 왈칵 눈물이</p>
+<p>흘러나오는 나의 얘기</p><br>
+
+<p>아무리 다이얼을 돌려도 돌아갈 수 없는</p>
+<p>그리운 시간은</p>
+<p>누구도 모르게 나 혼자만 가끔 꺼내볼래</p> 
+<p>돌아가고 싶어 매일 눈을 뜨며 가슴 설렌 아침</p> 
+<p>그리워 늘 꿈을 꾸며 잠든 밤</p>
+<p>하루하루 신 난 놀이동산 롤러코스터 같은</p>
+<p>그때로 다시 가고 싶어</p>
+<p>It's my time machine</p> <br>
+
+<p>오랜 상자 속에</p>
+<p>잠든 나의 어린 시절</p>
+<p>옛날 얘기처럼</p>
+<p>꺼낸 어린 시절 접기</p><br>
+        </div>
+    </div>
+<div class="background-image">
+    <img src="img/radio.png" alt="background-image">
+    </div>
+
+    <div class="background-image1" onclick="toggleMusic()">
+        <img src="img/pngegg.png" alt="background-image1" id="audio-img">
+        </div>
+        <audio id="background-music" src="mp3/Time Machine.mp3" loop></audio>
+
+        <script>
+            function toggleMusic() {
+                const music = document.getElementById('background-music');
+                const audioImg = document.getElementById('audio-img');
+        
+                if (music.paused) {
+                    music.play();
+                    audioImg.classList.add('playing'); // 재생 중 스타일 추가
+                } else {
+                    music.pause();
+                    audioImg.classList.remove('playing'); // 정지 중 스타일 제거
+                }
+            }
+        </script>
+
+    <script>
+        const vixxText = "VIXX"; // 제목 텍스트
+        const timeMachineText = "TimeMachine"; // 서브 제목 텍스트
+
+        const vixxElement = document.querySelector(".vixx-title");
+        const timeMachineElement = document.querySelector(".time-machine-title");
+
+        let vixxIndex = 0;
+        let timeMachineIndex = 0;
+
+        // 타이핑 함수
+        function typeText(element, text, index) {
+            if (index < text.length) {
+                element.innerText += text.charAt(index); // 한 글자씩 추가
+                index++;
+                setTimeout(() => typeText(element, text, index), 200); // 200ms 간격으로 다음 글자 타이핑
+            }
+        }
+
+        // 페이지가 로드되면 두 개의 타이핑 효과 시작
+        window.onload = () => {
+            typeText(vixxElement, vixxText, vixxIndex);
+            setTimeout(() => typeText(timeMachineElement, timeMachineText, timeMachineIndex), vixxText.length * 200 + 500); // VIXX 타이핑 후 약간의 지연 후 타이핑 시작
+        };
+    </script>
+
+</body>
+<a href="#top">
+<img src="img/clock.png.png" alt="logo" class="logo-image">
+</html>

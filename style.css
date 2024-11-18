@@ -1,0 +1,268 @@
+
+@font-face {
+    font-family: 'pretendard';
+    src: local('pretendard'), url('fonts/pretendard-bold.woff2') 
+    format('woff2');
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: 'Pretendard';
+    src: local('Pretendard'), url('fonts/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  html {
+    overflow-x: hidden; /* 가로 스크롤을 강제로 숨김 */
+    scroll-behavior: smooth;
+  }
+
+  header {
+    padding-top: 13vh;
+    padding-bottom: 4vh;
+    font-family: 'pretendard', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    pointer-events: none;
+  
+  }
+
+  .vixx-title {
+    display: block; /* 블록 요소로 만들어 줄 바꿈 */
+    margin-bottom: -15px;
+}
+
+  .time-machine-title {
+    font-size: 18px; /* 필요시 폰트 크기 조정 */
+  }
+
+  body {
+    font-family: "Poppins", "Noto Sans KR", sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    aspect-ratio: 2/1;
+    background: linear-gradient(180deg, #ffffff 0%, #b7b7a7 100%);
+  }
+
+  /* 노이즈 배경 추가 */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* 클릭 방지 */
+  background: url('img/noise2.png') center center / cover; /* 노이즈 텍스처 이미지 경로 */
+  opacity: 0.1; /* 필요시 조정 */
+  z-index: -2; /* 다른 요소보다 뒤에 */
+}
+
+.content {
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+  .text {
+    padding: rem 5rem;
+  }
+
+.text p {
+    padding-top: 10px;
+    font-size: 25px;
+    color: #383838;
+    font-weight: 600;
+    text-align: center;
+    transition: opacity 0.5s ease-in; /* 사라지는 속도 조절 */
+}
+
+.text p:nth-of-type(1) { color: #000000; } /* 주황색 */
+.text p:nth-of-type(2) { color: #020202; } /* 스틸 블루 */
+.text p:nth-of-type(3) { color: #060606; } /* 라임 그린 */
+.text p:nth-of-type(4) { color: #0c0c0c; } /* 골드 */
+.text p:nth-of-type(5) { color: #141414; } /* 오렌지 레드 */
+.text p:nth-of-type(6) { color: #1f1f1f; } /* 슬레이트 블루 */
+.text p:nth-of-type(7) { color: #212121; } /* 딥 핑크 */
+.text p:nth-of-type(8) { color: #202020; } /* 라이트 씨그린 */
+.text p:nth-of-type(9) { color: #252525; } /* 다크 오키드 */
+.text p:nth-of-type(10) { color: #2e2e2e; } /* 코랄 */
+.text p:nth-of-type(11) { color: #303030; } /* 블루 바이올렛 */
+.text p:nth-of-type(12) { color: #323232; } /* 다크 터쿼이즈 */
+.text p:nth-of-type(13) { color: #343434; } /* 오렌지 레드 */
+.text p:nth-of-type(14) { color: #363636; } /* 오키드 */
+.text p:nth-of-type(15) { color: #383838; } /* 초트루즈 그린 */
+.text p:nth-of-type(16) { color: #3a3a3a; } /* 초콜릿 */
+.text p:nth-of-type(17) { color: #3d3d3d; } /* 콘플라워 블루 */
+.text p:nth-of-type(18) { color: #3f3f3f; } /* 크림슨 */
+.text p:nth-of-type(19) { color: #414141; } /* 미디움 스프링 그린 */
+.text p:nth-of-type(20) { color: #434343; } /* 다크 레드 */
+.text p:nth-of-type(21) { color: #454545; } /* 핫핑크 */
+.text p:nth-of-type(22) { color: #484848; } /* 다저블루 */
+.text p:nth-of-type(23) { color: #4b4b4b; } /* 파이어브릭 */
+.text p:nth-of-type(24) { color: #4f4f4f; } /* 딥핑크 */
+.text p:nth-of-type(25) { color: #535353; } /* 다크오렌지 */
+.text p:nth-of-type(26) { color: #565656; } /* 그린 옐로우 */
+.text p:nth-of-type(27) { color: #5a5a5a; } /* 인디고 */
+.text p:nth-of-type(28) { color: #5e5e5e; } /* 스프링그린 */
+.text p:nth-of-type(29) { color: #606060; } /* 미디움오키드 */
+.text p:nth-of-type(30) { color: #626262; } /* 토마토 */
+.text p:nth-of-type(31) { color: #646464; } /* 스틸블루 */
+.text p:nth-of-type(32) { color: #676767; } /* 라임그린 */
+.text p:nth-of-type(33) { color: #696969; } /* 골드 */
+.text p:nth-of-type(34) { color: #6b6b6b; } /* 오렌지레드 */
+.text p:nth-of-type(35) { color: #6e6e6e; } /* 슬레이트블루 */
+.text p:nth-of-type(36) { color: #707070; } /* 딥핑크 */
+.text p:nth-of-type(37) { color: #727272; } /* 라이트씨그린 */
+.text p:nth-of-type(38) { color: #747474; } /* 다크오키드 */
+.text p:nth-of-type(39) { color: #787878; } /* 코랄 */
+.text p:nth-of-type(40) { color: #7a7a7a; } /* 블루바이올렛 */
+.text p:nth-of-type(41) { color: #7d7d7d; } /* 다크터쿼이즈 */
+.text p:nth-of-type(42) { color: #808080; } /* 핫핑크 */
+
+
+.background-image {
+  position: fixed;
+  opacity: 50%;
+  top: 10%;
+  left: 40;
+  width: 100%;
+  padding: 0 40px 0 40px;
+  box-sizing: border-box;
+  z-index: -1;
+}
+
+.background-image img {
+  width: 100%;
+}
+
+.background-image1 {
+  cursor: pointer;
+  position: absolute;
+  opacity: 80%;
+  top: 6%; /* 위쪽 여백 */
+  left: 0;
+  right: 0; /* 좌우 끝을 모두 0으로 설정 */
+  display: flex; /* flex 컨테이너로 설정 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  z-index: 0;
+}
+
+.background-image1 img {
+  width: 5%;
+  transition: opacity 0.5s ease
+}
+
+/* 음악 재생 중일 때 이미지가 투명해지고 회전 */
+.background-image1 img.playing {
+  opacity: 60%;
+}
+
+/* style.css */
+.text p:hover {
+  opacity: 0; /* 원하는 투명도 값으로 조절 */
+  animation: wave1 1s infinite alternate ease-in-out;
+}
+
+/* CSS keyframes 정의 */
+
+
+.logo-image {
+    position: fixed; /* 화면에 고정 */
+    opacity: 60%;
+    width: 50px; /* 이미지의 너비를 50px로 설정 */
+    height: auto; /* 세로 비율을 자동으로 설정하여 비율을 유지 */
+    bottom: 20px; /* 화면 하단에서 20px 위에 위치 */
+    right: 20px; /* 화면 오른쪽에서 20px 왼쪽에 위치 */
+}
+
+/* CSS keyframes 정의 */
+@keyframes wave1 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+/* 미디어 쿼리 - 태블릿 화면 (768px 이하) */
+@media (max-width: 1024px) {
+  html, body {
+      font-size: 14px; /* 글자 크기 조정 */
+  }
+
+  .header {
+      font-size: 13px;
+  }
+
+  .vixx-title {
+    padding-top: 3px;
+    font-size: 19px;
+}
+
+  .time-machine-title {
+    font-size: 20px; /* 필요시 폰트 크기 조정 */
+  }
+
+  .background-image {
+      top: 30%;
+      left: 8%;
+      width: 90%;
+  }
+
+  .background-image1 img {
+    justify-content: center; /* 수평 중앙 정렬 */
+    width: 8%;
+  }
+
+  .text p {
+      font-size: 25px;
+  }
+}
+
+/* 미디어 쿼리 - 모바일 화면 (480px 이하) */
+@media (max-width: 480px) {
+  html, body {
+      font-size: 13px; /* 작은 화면에서는 더 작은 폰트 크기 */
+  }
+
+  .header {
+      font-size: 10px;
+      
+  }
+
+  .vixx-title {
+    padding-top: 3px;
+    font-size: 12px;
+}
+
+  .time-machine-title {
+    font-size: 14px; /* 필요시 폰트 크기 조정 */
+  }
+
+  .background-image {
+      top: 40%;
+      left: 5%;
+      width: 100%; /* 전체 화면 너비 */
+  }
+
+  .background-image1 {
+      top: 8%;
+      justify-content: center; /* 수평 중앙 정렬 */
+  }
+
+  .background-image1 img {
+      width: 10%; /* 모바일에서 더 크게 표시 */
+  }
+
+  .text p {
+      font-size: 15px;
+  }
+
+  /* 모바일에서 로고 위치 조정 */
+  .logo-image {
+      width: 40px;
+  }
+}
